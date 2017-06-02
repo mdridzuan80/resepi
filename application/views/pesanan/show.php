@@ -15,10 +15,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php if($items->num_rows()){?>
+                        <?php $i=1; if($items->num_rows()){?>
                         <?php foreach($items->result() as $item){?>
                         <tr>
-                            <td><?=$item->id?></td>
+                            <td><?=$i++?></td>
                             <td><?=date("d-m-Y", strtotime($item->tarikh))?></td>
                             <td><?=namaResepi($item->resepi_id)?></td>
                             <td>

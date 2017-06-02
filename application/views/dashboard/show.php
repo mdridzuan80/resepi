@@ -6,15 +6,17 @@
     <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
+                <th>#</th>
                 <th>Bahan</th>
                 <th>Stok</th>
                 <th>Notis</th>
             </tr>
         </thead>
         <tbody>
-            <?php if($items->num_rows()){?>
+            <?php $i=1; if($items->num_rows()){?>
             <?php foreach($items->result() as $item){?>
             <tr>
+                <td><?=$i++?></td>
                 <td><?=$item->bahan?></td>
                 <td><?=calcBaki($item->id)?></td>
                 <td><?php

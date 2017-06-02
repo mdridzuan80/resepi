@@ -15,10 +15,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php if($items->num_rows()){?>
+                        <?php $i=1; if($items->num_rows()){?>
                         <?php foreach($items->result() as $item){?>
                         <tr>
-                            <td><?=$item->id?></td>
+                            <td><?=$i++?></td>
                             <td><?=namaBahan($item->bahan_id)?></td>
                             <td><?=$item->amaun?></td>
                             <td>
