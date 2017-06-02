@@ -22,9 +22,9 @@ DROP TABLE IF EXISTS `dict_bahan`;
 CREATE TABLE `dict_bahan` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `bahan` varchar(255) DEFAULT NULL,
+  `min_alert` decimal(7,2) DEFAULT '0.00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
-
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 -- ----------------------------
 -- Records of dict_bahan
 -- ----------------------------
