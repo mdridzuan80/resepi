@@ -18,9 +18,9 @@
             <tr>
                 <td><?=$i++?></td>
                 <td><?=$item->bahan?></td>
-                <td><?=calcBaki($item->id)?></td>
+                <td><?=(calcBaki($item->id)>0)? calcBaki($item->id) :0?></td>
                 <td><?php
-                    if(calcBaki($item->id)<20)
+                    if(calcBaki($item->id) < $item->min_alert)
                     {
                         echo "<a class=\"btn btn-danger btn-xs\" href=\"".base_url("inventori/".$item->id) . "\" role=\"button\">Inventori</a>";
                         echo "<i class=\"fa fa-exclamation-triangle\"></i>";
