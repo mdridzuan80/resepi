@@ -15,13 +15,15 @@ class Mbahan extends CI_Model
 
     public function add($bahan)
     {
-        $this->db->set('bahan', $bahan);
+        $this->db->set('bahan', $bahan[0]);
+        $this->db->set('min_alert', $bahan[1]);
         return $this->db->insert('dict_bahan');
     }
 
     public function edit($id, $bahan)
     {
-        $this->db->set('bahan', $bahan);
+        $this->db->set('bahan', $bahan[0]);
+        $this->db->set('min_alert', $bahan[1]);
         $this->db->where("id", $id);
         return $this->db->update('dict_bahan');
     }

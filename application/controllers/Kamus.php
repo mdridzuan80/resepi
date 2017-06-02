@@ -25,7 +25,8 @@ class Kamus extends MY_Controller {
         {
 			$this->load->model("mbahan");
             $bahan = $this->input->post("bahan");
-            if($this->mbahan->add($bahan))
+			$minAlert = $this->input->post("minalert");
+            if($this->mbahan->add([$bahan,$minAlert]))
             {
                 redirect("/kamus/bahan");
             }
@@ -37,8 +38,9 @@ class Kamus extends MY_Controller {
 		$this->load->model("mbahan");
 		if($this->isPost())
         {
-            $bahan = $this->input->post("bahan");
-            if($this->mbahan->edit($id, $bahan))
+			$bahan = $this->input->post("bahan");
+			$minAlert = $this->input->post("minalert");
+            if($this->mbahan->edit($id, [$bahan,$minAlert]))
             {
                 redirect("/kamus/bahan");
             }

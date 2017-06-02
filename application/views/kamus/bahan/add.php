@@ -7,6 +7,10 @@
                     <label>Bahan</label>
                     <input class="form-control" name="bahan" required>
                 </div>
+                <div class="form-group">
+                    <label>Minimun Alert</label>
+                    <input class="form-control" name="minalert" required>
+                </div>
                 <button type="submit" class="btn btn-primary">Simpan</button>
                 <button type="reset" class="btn btn-primary">Reset</button>
             </form>

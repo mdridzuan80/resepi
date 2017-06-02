@@ -10,6 +10,7 @@
                         <tr>
                             <th>#</th>
                             <th>Nama</th>
+                            <th>Minimun Alert</th>
                             <th>Operasi</th>
                         </tr>
                     </thead>
@@ -19,6 +20,7 @@
                         <tr>
                             <td><?=$item->id?></td>
                             <td><?=$item->bahan?></td>
+                            <td><?=$item->min_alert?></td>
                             <td>
                                 <a class="btn btn-primary btn-xs" href="<?=base_url("kamus/bahan/".$item->id)?>" role="button">Edit</a>
                                 <a class="btn btn-primary btn-xs" href="<?=base_url("kamus/bahan/".$item->id."/delete")?>" role="button" onclick="return confirm('Anda Pasti?')">Hapus</a>
