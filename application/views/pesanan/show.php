@@ -22,7 +22,7 @@
                             <td><?=date("d-m-Y", strtotime($item->tarikh))?></td>
                             <td><?=namaResepi($item->resepi_id)?></td>
                             <td>
-                                <a class="btn btn-primary btn-xs" href="<?=base_url("resepi/".$item->id."/delete")?>" role="button" onclick="return confirm('Anda Pasti?')">Hapus</a>
+                                <a class="btn btn-primary btn-xs" href="<?=base_url("pesanan/".$item->id."/delete")?>" role="button" onclick="return confirm('Anda Pasti?')">Hapus</a>
                             </td>
                         </tr>
                         <?php }?>

@@ -63,5 +63,7 @@ $route["resepi/(:num)/delete"] = "resepi/delete/$1";
 $route["resepi/(:num)/add"] = "resepi/bahan_add/$1";
 $route["resepi/bahan/(:num)/delete"] = "resepi/hapus_bahan/$1";
 
+$route["pesanan/(:num)/delete"] = "pesanan/delete/$1";
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

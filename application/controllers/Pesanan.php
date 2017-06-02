@@ -30,4 +30,12 @@ class Pesanan extends MY_Controller {
 		$data["resepi2"] = $this->mresepi->getAll();
 		renderView("pesanan/add", $data);
 	}
+
+	public function delete($id)
+	{
+		$this->load->model("mpesanan");
+		$this->mpesanan->delete($id);
+
+		redirect("pesanan");
+	}
 }
